@@ -1,0 +1,32 @@
+###
+GET http://localhost:3000/api/events
+
+###
+GET http://localhost:1337/events/throwback-thursdays-with-dj-manny-duke
+
+
+###
+
+POST http://localhost:1337/auth/local/register
+Content-Type: application/json
+
+{   
+    "username": "Alice",
+    "email": "alice@example.com",
+    "password": "Alice123"
+}
+
+###
+
+POST http://localhost:1337/auth/local
+Content-Type: application/json
+
+{   
+    "identifier": "alice@example.com",
+    "password": "Alice123"
+}
+
+###
+POST http://localhost:1337/users/me 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjMzMDgzNTkyLCJleHAiOjE2MzU2NzU1OTJ9.cPgML_K6GtTcG7LDU7DEMiYQ84CRc15a_vDPS8_scWU
+
